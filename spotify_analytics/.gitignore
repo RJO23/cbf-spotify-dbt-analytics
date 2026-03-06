@@ -1,0 +1,11 @@
+
+# dbt
+target/
+logs/
+dbt_packages/
+# Python
+__pycache__/
+# Mac
+.DS_Store
+# Environment files
+.env
