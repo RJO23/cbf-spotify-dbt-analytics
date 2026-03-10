@@ -1,51 +1,2000 @@
-[0m14:17:58.177490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092a7450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109583f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109583fd0>]}
+[0m14:20:28.269694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d92dad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d915450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9877d0>]}
 
 
-============================== 14:17:58.181409 | 5a2133a5-0047-4aec-856c-d868f1f2c292 ==============================
-[0m14:17:58.181409 [info ] [MainThread]: Running with dbt=1.11.5
-[0m14:17:58.181755 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'indirect_selection': 'eager', 'version_check': 'True', 'log_format': 'default', 'profiles_dir': '/Users/rhysorchard/.dbt', 'partial_parse': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'debug': 'False', 'use_colors': 'True', 'empty': 'None', 'introspect': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'log_path': 'logs', 'no_print': 'None', 'static_parser': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init spotify_analytics', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False'}
-[0m14:17:58.192873 [debug] [MainThread]: Starter project path: /Users/rhysorchard/.local/pipx/venvs/dbt-bigquery/lib/python3.11/site-packages/dbt/include/starter_project
-[0m14:17:58.196870 [info ] [MainThread]: 
-Your new dbt project "spotify_analytics" was created!
+============================== 14:20:28.271422 | a2b196ea-a2b1-44a1-9642-7bdea2a0b619 ==============================
+[0m14:20:28.271422 [info ] [MainThread]: Running with dbt=1.11.5
+[0m14:20:28.271670 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'invocation_command': 'dbt debug', 'profiles_dir': '/Users/rhysorchard/.dbt', 'partial_parse': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'target_path': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'empty': 'None', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'use_colors': 'True', 'introspect': 'True', 'static_parser': 'True', 'version_check': 'True', 'quiet': 'False', 'no_print': 'None', 'use_experimental_parser': 'False'}
+[0m14:20:28.277393 [info ] [MainThread]: dbt version: 1.11.5
+[0m14:20:28.277534 [info ] [MainThread]: python version: 3.11.14
+[0m14:20:28.277641 [info ] [MainThread]: python path: /Users/rhysorchard/.local/pipx/venvs/dbt-bigquery/bin/python
+[0m14:20:28.277734 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m14:20:30.431833 [info ] [MainThread]: Using profiles dir at /Users/rhysorchard/.dbt
+[0m14:20:30.432065 [info ] [MainThread]: Using profiles.yml file at /Users/rhysorchard/.dbt/profiles.yml
+[0m14:20:30.432163 [info ] [MainThread]: Using dbt_project.yml file at /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/dbt_project.yml
+[0m14:20:30.432260 [info ] [MainThread]: adapter type: bigquery
+[0m14:20:30.432349 [info ] [MainThread]: adapter version: 1.11.0
+[0m14:20:30.462525 [info ] [MainThread]: Configuration:
+[0m14:20:30.462675 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:20:30.462772 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:20:30.462866 [info ] [MainThread]: Required dependencies:
+[0m14:20:30.463024 [debug] [MainThread]: Executing "git --help"
+[0m14:20:30.486548 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:20:30.486965 [debug] [MainThread]: STDERR: "b''"
+[0m14:20:30.487105 [info ] [MainThread]:  - git [[32mOK found[0m]
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+[0m14:20:30.487231 [info ] [MainThread]: Connection:
+[0m14:20:30.487380 [info ] [MainThread]:   method: oauth
+[0m14:20:30.487466 [info ] [MainThread]:   database: rhys-project-485811
+[0m14:20:30.487558 [info ] [MainThread]:   execution_project: rhys-project-485811
+[0m14:20:30.487646 [info ] [MainThread]:   schema: dbt_rhys_spotify
+[0m14:20:30.487733 [info ] [MainThread]:   location: EU
+[0m14:20:30.487819 [info ] [MainThread]:   priority: interactive
+[0m14:20:30.487904 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:20:30.487991 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:20:30.488087 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:20:30.488167 [info ] [MainThread]:   job_retries: 1
+[0m14:20:30.488257 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:20:30.488340 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:20:30.488427 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:20:30.488514 [info ] [MainThread]:   client_id: None
+[0m14:20:30.488597 [info ] [MainThread]:   token_uri: None
+[0m14:20:30.488680 [info ] [MainThread]:   compute_region: None
+[0m14:20:30.488761 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:20:30.488854 [info ] [MainThread]:   gcs_bucket: None
+[0m14:20:30.488937 [info ] [MainThread]:   dataproc_batch: None
+[0m14:20:30.489158 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m14:20:30.593553 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:20:30.593783 [debug] [MainThread]: On debug: select 1 as id
+[0m14:20:30.593903 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:20:39.427562 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: 'Runtime Error
+  Failed to authenticate with supplied credentials
+  error:
+  Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.'
+[0m14:20:39.428515 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m14:20:39.428927 [debug] [MainThread]: BigQuery adapter: Database Error
+  Runtime Error
+    Failed to authenticate with supplied credentials
+    error:
+    Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[0m14:20:39.429447 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
 
-  https://docs.getdbt.com/docs/configure-your-profile
+[0m14:20:39.429900 [info ] [MainThread]: [31m1 check failed:[0m
+[0m14:20:39.430236 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
 
-One more thing:
+  >'NoneType' object has no attribute 'close'
 
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
-
-  https://community.getdbt.com/
-
-Happy modeling!
-
-[0m14:17:58.197032 [info ] [MainThread]: Setting up your profile.
-[0m14:20:04.940177 [info ] [MainThread]: Profile spotify_analytics written to /Users/rhysorchard/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m14:20:04.962370 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 126.90571, "process_in_blocks": "0", "process_kernel_time": 0.942289, "process_mem_max_rss": "384368640", "process_out_blocks": "0", "process_user_time": 2.093838}
-[0m14:20:04.963648 [debug] [MainThread]: Command `dbt init` succeeded at 14:20:04.963537 after 126.91 seconds
-[0m14:20:04.964035 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109583790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10951dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105479950>]}
-[0m14:20:04.964444 [debug] [MainThread]: Flushing usage events
-[0m14:20:05.625813 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m14:34:52.012762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b949450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9a2290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9affd0>]}
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
 
 
-============================== 14:34:52.014255 | c5f15365-004e-4bee-866b-ffe79b51ed47 ==============================
-[0m14:34:52.014255 [info ] [MainThread]: Running with dbt=1.11.5
-[0m14:34:52.014476 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/rhysorchard/.dbt', 'no_print': 'None', 'fail_fast': 'False', 'write_json': 'True', 'invocation_command': 'dbt debug', 'warn_error': 'None', 'static_parser': 'True', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'log_path': 'logs', 'debug': 'False', 'partial_parse': 'True', 'log_format': 'default', 'quiet': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'version_check': 'True', 'empty': 'None'}
-[0m14:34:52.019018 [info ] [MainThread]: dbt version: 1.11.5
-[0m14:34:52.019156 [info ] [MainThread]: python version: 3.11.14
-[0m14:34:52.019269 [info ] [MainThread]: python path: /Users/rhysorchard/.local/pipx/venvs/dbt-bigquery/bin/python
-[0m14:34:52.019365 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
-[0m14:34:54.127581 [info ] [MainThread]: Using profiles dir at /Users/rhysorchard/.dbt
-[0m14:34:54.127801 [info ] [MainThread]: Using profiles.yml file at /Users/rhysorchard/.dbt/profiles.yml
-[0m14:34:54.127908 [info ] [MainThread]: Using dbt_project.yml file at /Users/rhysorchard/cbf-spotify-dbt-analytics/dbt_project.yml
-[0m14:34:54.128040 [error] [MainThread]: Encountered an error:
-Internal Error
-  Profile should not be None if loading profile completed
-[0m14:34:54.129792 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 2.1493068, "process_in_blocks": "0", "process_kernel_time": 0.754825, "process_mem_max_rss": "384466944", "process_out_blocks": "0", "process_user_time": 1.919266}
-[0m14:34:54.129996 [debug] [MainThread]: Command `dbt debug` failed at 14:34:54.129964 after 2.15 seconds
-[0m14:34:54.130114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102995850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102995750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b49b5d0>]}
-[0m14:34:54.130243 [debug] [MainThread]: Flushing usage events
-[0m14:34:55.045794 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:20:39.436970 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 11.200319, "process_in_blocks": "0", "process_kernel_time": 0.799613, "process_mem_max_rss": "389955584", "process_out_blocks": "0", "process_user_time": 2.081356}
+[0m14:20:39.438352 [debug] [MainThread]: Command `dbt debug` failed at 14:20:39.438237 after 11.20 seconds
+[0m14:20:39.438787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9abb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9abed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109845810>]}
+[0m14:20:39.439156 [debug] [MainThread]: Flushing usage events
+[0m14:20:40.139683 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:37:35.757059 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d69ee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d03d450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6fa790>]}
+
+
+============================== 14:37:35.758626 | 1465110a-1d37-4e0c-aca1-07ece1a77c66 ==============================
+[0m14:37:35.758626 [info ] [MainThread]: Running with dbt=1.11.5
+[0m14:37:35.758859 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'empty': 'None', 'profiles_dir': '/Users/rhysorchard/.dbt', 'partial_parse': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'debug': 'False', 'version_check': 'True', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'static_parser': 'True', 'warn_error': 'None', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'introspect': 'True', 'indirect_selection': 'eager', 'printer_width': '80', 'quiet': 'False', 'log_cache_events': 'False'}
+[0m14:37:35.763352 [info ] [MainThread]: dbt version: 1.11.5
+[0m14:37:35.763497 [info ] [MainThread]: python version: 3.11.14
+[0m14:37:35.763663 [info ] [MainThread]: python path: /Users/rhysorchard/.local/pipx/venvs/dbt-bigquery/bin/python
+[0m14:37:35.763759 [info ] [MainThread]: os info: macOS-26.3-arm64-arm-64bit
+[0m14:37:37.941828 [info ] [MainThread]: Using profiles dir at /Users/rhysorchard/.dbt
+[0m14:37:37.942066 [info ] [MainThread]: Using profiles.yml file at /Users/rhysorchard/.dbt/profiles.yml
+[0m14:37:37.942185 [info ] [MainThread]: Using dbt_project.yml file at /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/dbt_project.yml
+[0m14:37:37.942296 [info ] [MainThread]: adapter type: bigquery
+[0m14:37:37.942398 [info ] [MainThread]: adapter version: 1.11.0
+[0m14:37:37.973324 [info ] [MainThread]: Configuration:
+[0m14:37:37.973538 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m14:37:37.973643 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m14:37:37.973737 [info ] [MainThread]: Required dependencies:
+[0m14:37:37.973924 [debug] [MainThread]: Executing "git --help"
+[0m14:37:38.002015 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m14:37:38.002435 [debug] [MainThread]: STDERR: "b''"
+[0m14:37:38.002561 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m14:37:38.002685 [info ] [MainThread]: Connection:
+[0m14:37:38.002837 [info ] [MainThread]:   method: service-account
+[0m14:37:38.002929 [info ] [MainThread]:   database: rhys-project-485811
+[0m14:37:38.003022 [info ] [MainThread]:   execution_project: rhys-project-485811
+[0m14:37:38.003109 [info ] [MainThread]:   schema: dbt_rhys_spotify
+[0m14:37:38.003192 [info ] [MainThread]:   location: EU
+[0m14:37:38.003278 [info ] [MainThread]:   priority: interactive
+[0m14:37:38.003367 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m14:37:38.003452 [info ] [MainThread]:   impersonate_service_account: None
+[0m14:37:38.003536 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m14:37:38.003620 [info ] [MainThread]:   job_retries: 1
+[0m14:37:38.003706 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m14:37:38.003793 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m14:37:38.003878 [info ] [MainThread]:   timeout_seconds: 300
+[0m14:37:38.003964 [info ] [MainThread]:   client_id: None
+[0m14:37:38.004050 [info ] [MainThread]:   token_uri: None
+[0m14:37:38.004134 [info ] [MainThread]:   compute_region: None
+[0m14:37:38.004219 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m14:37:38.004303 [info ] [MainThread]:   gcs_bucket: None
+[0m14:37:38.004386 [info ] [MainThread]:   dataproc_batch: None
+[0m14:37:38.004604 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m14:37:38.091927 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m14:37:38.092297 [debug] [MainThread]: On debug: select 1 as id
+[0m14:37:38.092444 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:37:38.878649 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:4a28f493-e836-418b-a0f3-c86b0ba21c72&page=queryresults
+[0m14:37:39.110499 [debug] [MainThread]: SQL status: OK in 0.230 seconds
+[0m14:37:39.324136 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m14:37:39.324998 [info ] [MainThread]: [32mAll checks passed![0m
+[0m14:37:39.330907 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.604589, "process_in_blocks": "0", "process_kernel_time": 0.843593, "process_mem_max_rss": "401555456", "process_out_blocks": "0", "process_user_time": 2.159841}
+[0m14:37:39.331513 [debug] [MainThread]: Command `dbt debug` succeeded at 14:37:39.331394 after 3.61 seconds
+[0m14:37:39.331840 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m14:37:39.332121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109565ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d706d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d707e50>]}
+[0m14:37:39.332437 [debug] [MainThread]: Flushing usage events
+[0m14:37:39.980612 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:14:55.229560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096f8510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109767f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109765010>]}
+
+
+============================== 16:14:55.231039 | 53a50eb7-145d-4c21-bb06-536b3ba571c9 ==============================
+[0m16:14:55.231039 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:14:55.231260 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'warn_error': 'None', 'empty': 'False', 'version_check': 'True', 'use_colors': 'True', 'profiles_dir': '/Users/rhysorchard/.dbt', 'no_print': 'None', 'write_json': 'True', 'target_path': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'log_format': 'default', 'debug': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select stg_tracks', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'fail_fast': 'False'}
+[0m16:14:57.611774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119370150>]}
+[0m16:14:57.691205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b95950>]}
+[0m16:14:57.691556 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:14:57.783544 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:14:57.783917 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:14:57.784076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1163af550>]}
+[0m16:14:58.132855 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_first_dbt_model' in the 'models' section of file 'models/Models/schema.yml'
+[0m16:14:58.133324 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'my_second_dbt_model' in the 'models' section of file 'models/Models/schema.yml'
+[0m16:14:58.169146 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.spotify_analytics.unique_my_first_dbt_model_id.16e066b321' (models/Models/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m16:14:58.169344 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.spotify_analytics.not_null_my_first_dbt_model_id.5fb22c2710' (models/Models/schema.yml) depends on a node named 'my_first_dbt_model' in package '' which was not found
+[0m16:14:58.169471 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.spotify_analytics.unique_my_second_dbt_model_id.57a0f8c493' (models/Models/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m16:14:58.169602 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.spotify_analytics.not_null_my_second_dbt_model_id.151b76d778' (models/Models/schema.yml) depends on a node named 'my_second_dbt_model' in package '' which was not found
+[0m16:14:58.200681 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.spotify_analytics.example
+[0m16:14:58.203803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119864290>]}
+[0m16:14:58.231870 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:14:58.232677 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:14:58.239492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119ca7810>]}
+[0m16:14:58.239650 [info ] [MainThread]: Found 1 model, 1 source, 538 macros
+[0m16:14:58.239754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119b11890>]}
+[0m16:14:58.240282 [info ] [MainThread]: 
+[0m16:14:58.240399 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:14:58.240485 [info ] [MainThread]: 
+[0m16:14:58.240644 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:14:58.240959 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m16:14:58.241087 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:14:58.764327 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now create_rhys-project-485811_dbt_rhys_spotify)
+[0m16:14:58.765458 [debug] [ThreadPool]: Creating schema "database: "rhys-project-485811"
+schema: "dbt_rhys_spotify"
+"
+[0m16:14:58.774206 [debug] [ThreadPool]: On create_rhys-project-485811_dbt_rhys_spotify: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "connection_name": "create_rhys-project-485811_dbt_rhys_spotify"} */
+create schema if not exists `rhys-project-485811`.`dbt_rhys_spotify`
+  
+[0m16:14:58.774539 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:14:59.378559 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:7fd428b7-d1fa-4850-9258-ac61f3513909&page=queryresults
+[0m16:15:00.612681 [debug] [ThreadPool]: SQL status: OK in 1.233 seconds
+[0m16:15:00.658190 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_rhys-project-485811_dbt_rhys_spotify, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m16:15:00.658411 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:15:01.059273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119af3410>]}
+[0m16:15:01.060502 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:15:01.130159 [debug] [Thread-1 (]: Began running node model.spotify_analytics.stg_tracks
+[0m16:15:01.130557 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_rhys_spotify.stg_tracks ........................ [RUN]
+[0m16:15:01.130781 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.stg_tracks)
+[0m16:15:01.130913 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.stg_tracks
+[0m16:15:01.134658 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.stg_tracks"
+[0m16:15:01.135133 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.stg_tracks
+[0m16:15:01.143982 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.stg_tracks"
+[0m16:15:01.144418 [debug] [Thread-1 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+
+  create or replace view `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  OPTIONS()
+  as with source as (
+
+    select * from `rhys-project-485811`.`raw_spotify_data`.`tracks`
+),
+
+renamed as (
+    select
+        -- IDs and Core Metadata
+        cast(track_id as string) as track_id,
+        cast(track_name as string) as track_name,
+        cast(artists as string) as artist_names,
+        cast(album_name as string) as album_name,
+        
+        -- Clean up the genre text (lowercase and remove extra spaces)
+        lower(trim(track_genre)) as track_genre,
+        
+        -- Core Metrics
+        cast(popularity as int64) as popularity,
+        
+        -- Audio Features
+        cast(danceability as float64) as danceability,
+        cast(energy as float64) as energy,
+        cast(tempo as float64) as tempo,
+        
+        -- Transformations: Convert milliseconds to minutes
+        cast(duration_ms as int64) as duration_ms,
+        round(cast(duration_ms as float64) / 60000.0, 2) as duration_minutes
+
+    from source
+    where track_id is not null
+)
+
+select * from renamed;
+
+
+[0m16:15:01.144588 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:15:01.792222 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:a1360a45-fc54-4e52-931d-6fde6ff8656a&page=queryresults
+[0m16:15:01.793709 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:a1360a45-fc54-4e52-931d-6fde6ff8656a&page=queryresults
+[0m16:15:01.805426 [debug] [Thread-1 (]: Database Error in model stg_tracks (models/staging/stg_tracks.sql)
+  Not found: Table rhys-project-485811:raw_spotify_data.tracks was not found in location EU
+  compiled code at target/run/spotify_analytics/models/staging/stg_tracks.sql
+[0m16:15:01.806999 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '53a50eb7-145d-4c21-bb06-536b3ba571c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a072410>]}
+[0m16:15:01.807501 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model dbt_rhys_spotify.stg_tracks ............... [[31mERROR[0m in 0.68s]
+[0m16:15:01.807868 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.stg_tracks
+[0m16:15:01.808192 [debug] [Thread-7 (]: Marking all children of 'model.spotify_analytics.stg_tracks' to be skipped because of status 'error'.  Reason: Database Error in model stg_tracks (models/staging/stg_tracks.sql)
+  Not found: Table rhys-project-485811:raw_spotify_data.tracks was not found in location EU
+  compiled code at target/run/spotify_analytics/models/staging/stg_tracks.sql.
+[0m16:15:01.809423 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:15:01.864670 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:15:01.864790 [debug] [MainThread]: Connection 'model.spotify_analytics.stg_tracks' was properly closed.
+[0m16:15:01.864897 [info ] [MainThread]: 
+[0m16:15:01.865018 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.62 seconds (3.62s).
+[0m16:15:01.865249 [debug] [MainThread]: Command end result
+[0m16:15:01.874921 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:15:01.875586 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:15:01.877617 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/run_results.json
+[0m16:15:01.877710 [info ] [MainThread]: 
+[0m16:15:01.877835 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:15:01.877929 [info ] [MainThread]: 
+[0m16:15:01.878047 [error] [MainThread]: [31mFailure in model stg_tracks (models/staging/stg_tracks.sql)[0m
+[0m16:15:01.878164 [error] [MainThread]:   Database Error in model stg_tracks (models/staging/stg_tracks.sql)
+  Not found: Table rhys-project-485811:raw_spotify_data.tracks was not found in location EU
+  compiled code at target/run/spotify_analytics/models/staging/stg_tracks.sql
+[0m16:15:01.878249 [info ] [MainThread]: 
+[0m16:15:01.878353 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/staging/stg_tracks.sql
+[0m16:15:01.878434 [info ] [MainThread]: 
+[0m16:15:01.878533 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:15:01.880556 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 6.682573, "process_in_blocks": "0", "process_kernel_time": 1.04037, "process_mem_max_rss": "419479552", "process_out_blocks": "0", "process_user_time": 3.018404}
+[0m16:15:01.880709 [debug] [MainThread]: Command `dbt run` failed at 16:15:01.880680 after 6.68 seconds
+[0m16:15:01.880832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10978c650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119ad1950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1007b9950>]}
+[0m16:15:01.880942 [debug] [MainThread]: Flushing usage events
+[0m16:15:02.575035 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:22:11.496555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb3fa50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bba4a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb9bd90>]}
+
+
+============================== 16:22:11.498068 | 7b9238e5-8a95-4de8-8949-9646d6a50a9a ==============================
+[0m16:22:11.498068 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:22:11.498284 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'partial_parse': 'True', 'version_check': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'fail_fast': 'False', 'warn_error': 'None', 'static_parser': 'True', 'log_format': 'default', 'write_json': 'True', 'empty': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'no_print': 'None', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'printer_width': '80', 'log_cache_events': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'invocation_command': 'dbt run --select stg_tracks', 'cache_selected_only': 'False'}
+[0m16:22:14.341731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7b9238e5-8a95-4de8-8949-9646d6a50a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b7b3e10>]}
+[0m16:22:14.440064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7b9238e5-8a95-4de8-8949-9646d6a50a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108f99dd0>]}
+[0m16:22:14.440489 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:22:14.557693 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:22:14.592249 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m16:22:14.592514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7b9238e5-8a95-4de8-8949-9646d6a50a9a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11b867d50>]}
+[0m16:22:15.006441 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.spotify_analytics.stg_tracks' (models/staging/stg_tracks.sql) depends on a source named 'raw_spotify_data.tracks' which was not found
+[0m16:22:15.009033 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 3.5443802, "process_in_blocks": "0", "process_kernel_time": 1.260479, "process_mem_max_rss": "400179200", "process_out_blocks": "0", "process_user_time": 2.793704}
+[0m16:22:15.009260 [debug] [MainThread]: Command `dbt run` failed at 16:22:15.009213 after 3.54 seconds
+[0m16:22:15.009434 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103041a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102fcd790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11baf59d0>]}
+[0m16:22:15.009602 [debug] [MainThread]: Flushing usage events
+[0m16:22:15.889844 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:24:06.078225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf9d2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bffe350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bffe790>]}
+
+
+============================== 16:24:06.079687 | de179369-f885-4fa5-afbe-a0d310a1ae62 ==============================
+[0m16:24:06.079687 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:24:06.079911 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'invocation_command': 'dbt run --select stg_tracks', 'empty': 'False', 'quiet': 'False', 'version_check': 'True', 'write_json': 'True', 'debug': 'False', 'static_parser': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'log_format': 'default', 'target_path': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'introspect': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80'}
+[0m16:24:08.429494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bbf1b50>]}
+[0m16:24:08.509663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109400e10>]}
+[0m16:24:08.510020 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:24:08.601700 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:24:08.633830 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m16:24:08.634077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b16db90>]}
+[0m16:24:08.994580 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bc9e8d0>]}
+[0m16:24:09.017055 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:24:09.017817 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:24:09.022784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4984d0>]}
+[0m16:24:09.022932 [info ] [MainThread]: Found 1 model, 1 source, 538 macros
+[0m16:24:09.023042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c0f8410>]}
+[0m16:24:09.023556 [info ] [MainThread]: 
+[0m16:24:09.023671 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:24:09.023758 [info ] [MainThread]: 
+[0m16:24:09.023917 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:24:09.024216 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m16:24:09.024331 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:24:09.571253 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m16:24:09.571908 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:24:09.966491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c1cdcd0>]}
+[0m16:24:09.967769 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:24:10.035227 [debug] [Thread-1 (]: Began running node model.spotify_analytics.stg_tracks
+[0m16:24:10.035554 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_rhys_spotify.stg_tracks ........................ [RUN]
+[0m16:24:10.035751 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.stg_tracks)
+[0m16:24:10.035876 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.stg_tracks
+[0m16:24:10.039063 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.stg_tracks"
+[0m16:24:10.039397 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.stg_tracks
+[0m16:24:10.050250 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.stg_tracks"
+[0m16:24:10.050578 [debug] [Thread-1 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+
+  create or replace view `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  OPTIONS()
+  as with source as (
+
+    select * from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+),
+
+renamed as (
+    select
+        -- IDs and Core Metadata
+        cast(track_id as string) as track_id,
+        cast(track_name as string) as track_name,
+        cast(artists as string) as artist_names,
+        cast(album_name as string) as album_name,
+        
+        -- Clean up the genre text (lowercase and remove extra spaces)
+        lower(trim(track_genre)) as track_genre,
+        
+        -- Core Metrics
+        cast(popularity as int64) as popularity,
+        
+        -- Audio Features
+        cast(danceability as float64) as danceability,
+        cast(energy as float64) as energy,
+        cast(tempo as float64) as tempo,
+        
+        -- Transformations: Convert milliseconds to minutes
+        cast(duration_ms as int64) as duration_ms,
+        round(cast(duration_ms as float64) / 60000.0, 2) as duration_minutes
+
+    from source
+    where track_id is not null
+)
+
+select * from renamed;
+
+
+[0m16:24:10.050742 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:24:11.108539 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:08c72f9f-d07e-42a5-a1e0-94292f2eefb0&page=queryresults
+[0m16:24:11.376030 [debug] [Thread-1 (]: SQL status: OK in 0.266 seconds
+[0m16:24:11.426406 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'de179369-f885-4fa5-afbe-a0d310a1ae62', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c84a1d0>]}
+[0m16:24:11.426748 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_rhys_spotify.stg_tracks ................... [[32mCREATE VIEW (0 processed)[0m in 1.39s]
+[0m16:24:11.426998 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.stg_tracks
+[0m16:24:11.427617 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:24:11.474200 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:24:11.474313 [debug] [MainThread]: Connection 'model.spotify_analytics.stg_tracks' was properly closed.
+[0m16:24:11.474417 [info ] [MainThread]: 
+[0m16:24:11.474525 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.45 seconds (2.45s).
+[0m16:24:11.474753 [debug] [MainThread]: Command end result
+[0m16:24:11.483103 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:24:11.483731 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:24:11.485625 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/run_results.json
+[0m16:24:11.485711 [info ] [MainThread]: 
+[0m16:24:11.485838 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:24:11.485928 [info ] [MainThread]: 
+[0m16:24:11.486031 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:24:11.487933 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.441775, "process_in_blocks": "0", "process_kernel_time": 1.013766, "process_mem_max_rss": "412860416", "process_out_blocks": "0", "process_user_time": 2.901752}
+[0m16:24:11.488079 [debug] [MainThread]: Command `dbt run` succeeded at 16:24:11.488050 after 5.44 seconds
+[0m16:24:11.488189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bffdd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bffe790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e2ded0>]}
+[0m16:24:11.488292 [debug] [MainThread]: Flushing usage events
+[0m16:24:12.153889 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:36:25.991843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd03c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10da8b990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcf8150>]}
+
+
+============================== 16:36:25.993539 | 6ca3f37d-b46e-4061-bbd5-0f0eef12aabb ==============================
+[0m16:36:25.993539 [info ] [MainThread]: Running with dbt=1.11.5
+[0m16:36:25.993780 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select int_tracks_enriched', 'write_json': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'printer_width': '80', 'warn_error': 'None', 'cache_selected_only': 'False', 'introspect': 'True', 'partial_parse': 'True', 'target_path': 'None', 'fail_fast': 'False', 'static_parser': 'True', 'quiet': 'False', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/logs', 'empty': 'False', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'log_format': 'default'}
+[0m16:36:28.353998 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd23250>]}
+[0m16:36:28.433651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b161650>]}
+[0m16:36:28.433994 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m16:36:28.535826 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m16:36:28.574531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:36:28.574753 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/Models/intermediate/int_tracks_enriched.sql
+[0m16:36:28.657217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11dfbfcd0>]}
+[0m16:36:28.681529 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:36:28.682406 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:36:28.688037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e0e15d0>]}
+[0m16:36:28.688235 [info ] [MainThread]: Found 2 models, 1 source, 538 macros
+[0m16:36:28.688357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e070dd0>]}
+[0m16:36:28.688944 [info ] [MainThread]: 
+[0m16:36:28.689082 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:36:28.689177 [info ] [MainThread]: 
+[0m16:36:28.689373 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m16:36:28.689747 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m16:36:28.689916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:36:29.214365 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m16:36:29.214987 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:36:29.643242 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dde5c10>]}
+[0m16:36:29.644276 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:36:29.713454 [debug] [Thread-1 (]: Began running node model.spotify_analytics.int_tracks_enriched
+[0m16:36:29.713864 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_rhys_spotify.int_tracks_enriched ............... [RUN]
+[0m16:36:29.714079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.int_tracks_enriched)
+[0m16:36:29.714212 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.int_tracks_enriched
+[0m16:36:29.717494 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.int_tracks_enriched"
+[0m16:36:29.717927 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.int_tracks_enriched
+[0m16:36:29.728806 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.int_tracks_enriched"
+[0m16:36:29.729377 [debug] [Thread-1 (]: On model.spotify_analytics.int_tracks_enriched: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.int_tracks_enriched"} */
+
+
+  create or replace view `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+  OPTIONS()
+  as with staged_tracks as (
+
+    select * from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+),
+
+enriched as (
+    select
+       
+        track_id,
+        track_name,
+        artist_names,
+        album_name,
+        track_genre,
+        popularity,
+        danceability,
+        energy,
+        tempo,
+        duration_minutes,
+
+        -- Popularity Buckets
+        case
+            when popularity >= 80 then 'High'
+            when popularity >= 50 then 'Medium'
+            else 'Low'
+        end as popularity_bucket,
+
+        -- Duration Categories
+        case
+            when duration_minutes < 3.0 then 'Short (< 3 mins)'
+            when duration_minutes <= 5.0 then 'Standard (3-5 mins)'
+            else 'Long (> 5 mins)'
+        end as duration_category,
+
+        -- Tempo Groupings
+        case
+            when tempo >= 120.0 then 'Fast'
+            when tempo >= 90.0 then 'Medium'
+            else 'Slow'
+        end as tempo_category
+
+    from staged_tracks
+)
+
+select * from enriched;
+
+
+[0m16:36:29.729549 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:36:30.642272 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:20a02098-5e1c-4b76-8b8d-904b471182f7&page=queryresults
+[0m16:36:31.004207 [debug] [Thread-1 (]: SQL status: OK in 0.360 seconds
+[0m16:36:31.056157 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6ca3f37d-b46e-4061-bbd5-0f0eef12aabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d9fc410>]}
+[0m16:36:31.056511 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_rhys_spotify.int_tracks_enriched .......... [[32mCREATE VIEW (0 processed)[0m in 1.34s]
+[0m16:36:31.056762 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.int_tracks_enriched
+[0m16:36:31.057390 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:36:31.104295 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:36:31.104414 [debug] [MainThread]: Connection 'model.spotify_analytics.int_tracks_enriched' was properly closed.
+[0m16:36:31.104519 [info ] [MainThread]: 
+[0m16:36:31.104633 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.42 seconds (2.42s).
+[0m16:36:31.104862 [debug] [MainThread]: Command end result
+[0m16:36:31.113191 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/manifest.json
+[0m16:36:31.113819 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/semantic_manifest.json
+[0m16:36:31.115822 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/spotify_analytics/target/run_results.json
+[0m16:36:31.115922 [info ] [MainThread]: 
+[0m16:36:31.116054 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:36:31.116145 [info ] [MainThread]: 
+[0m16:36:31.116252 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:36:31.118138 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.159223, "process_in_blocks": "0", "process_kernel_time": 1.030983, "process_mem_max_rss": "411205632", "process_out_blocks": "0", "process_user_time": 2.643251}
+[0m16:36:31.118286 [debug] [MainThread]: Command `dbt run` succeeded at 16:36:31.118256 after 5.16 seconds
+[0m16:36:31.118404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd6bf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd5e0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104c81e10>]}
+[0m16:36:31.118510 [debug] [MainThread]: Flushing usage events
+[0m16:36:31.819483 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:50:17.376298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd1de90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd7e650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dda8a10>]}
+
+
+============================== 15:50:17.380369 | 1be88ec0-5d14-4c7c-8f17-da659910e55e ==============================
+[0m15:50:17.380369 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:50:17.380712 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/rhysorchard/.dbt', 'partial_parse': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'write_json': 'True', 'introspect': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'cache_selected_only': 'False', 'version_check': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'printer_width': '80', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'debug': 'False', 'fail_fast': 'False', 'empty': 'None', 'use_colors': 'True', 'no_print': 'None'}
+[0m15:50:20.536808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d8c09d0>]}
+[0m15:50:20.615927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b065390>]}
+[0m15:50:20.616269 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:50:20.718580 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:50:20.764646 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 2 files added, 2 files changed.
+[0m15:50:20.764879 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/intermediate/intermediate/int_tracks_enriched.sql
+[0m15:50:20.765008 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/staging/_staging.yml
+[0m15:50:20.765165 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/staging/_sources.yml
+[0m15:50:20.765249 [debug] [MainThread]: Partial parsing: deleted file: spotify_analytics://models/Models/intermediate/int_tracks_enriched.sql
+[0m15:50:20.765341 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/staging/stg_tracks.sql
+[0m15:50:20.926637 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e138650>]}
+[0m15:50:20.954380 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:50:20.955337 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:50:20.968162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11e33b550>]}
+[0m15:50:20.968335 [info ] [MainThread]: Found 2 models, 5 data tests, 1 source, 538 macros
+[0m15:50:20.968446 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df68790>]}
+[0m15:50:20.969205 [info ] [MainThread]: 
+[0m15:50:20.969320 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:50:20.969406 [info ] [MainThread]: 
+[0m15:50:20.969573 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:50:20.970907 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811_dbt_rhys_spotify'
+[0m15:50:20.971028 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:50:21.454521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1be88ec0-5d14-4c7c-8f17-da659910e55e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11df1ba90>]}
+[0m15:50:21.455492 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:50:21.524526 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:50:21.524752 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:50:21.524971 [debug] [Thread-3 (]: Began running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:50:21.525091 [debug] [Thread-4 (]: Began running node test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5
+[0m15:50:21.525221 [info ] [Thread-1 (]: 1 of 5 START test not_null_stg_tracks_duration_minutes ......................... [RUN]
+[0m15:50:21.525416 [info ] [Thread-2 (]: 2 of 5 START test not_null_stg_tracks_track_id ................................. [RUN]
+[0m15:50:21.525602 [info ] [Thread-3 (]: 3 of 5 START test source_not_null_raw_spotify_tracks_track_id .................. [RUN]
+[0m15:50:21.525763 [info ] [Thread-4 (]: 4 of 5 START test source_unique_raw_spotify_tracks_track_id .................... [RUN]
+[0m15:50:21.525984 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1)
+[0m15:50:21.526215 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a'
+[0m15:50:21.526401 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3'
+[0m15:50:21.526557 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5'
+[0m15:50:21.526762 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:50:21.526886 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:50:21.526999 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:50:21.527112 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5
+[0m15:50:21.533300 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:50:21.534760 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:50:21.536129 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:50:21.538156 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5"
+[0m15:50:21.538631 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:50:21.538744 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:50:21.538848 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5
+[0m15:50:21.546926 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:50:21.547043 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:50:21.547933 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:50:21.548787 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5"
+[0m15:50:21.549784 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:50:21.550080 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select duration_minutes
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where duration_minutes is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:50:21.550276 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:50:21.550443 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:50:21.550579 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:50:21.550734 [debug] [Thread-4 (]: On test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:50:21.550930 [debug] [Thread-3 (]: On test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:50:21.593220 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:50:21.632722 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:50:22.575410 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:e45cf251-d11d-46d2-b6e3-dd9a18af4443&page=queryresults
+[0m15:50:22.654785 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:c330f02b-5548-4666-b6a1-f8e5c374ccf3&page=queryresults
+[0m15:50:22.774618 [debug] [Thread-3 (]: SQL status: OK in 0.198 seconds
+[0m15:50:22.804301 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:62b363b0-7f48-4e2b-8132-02d22a2ed55f&page=queryresults
+[0m15:50:22.810846 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:7c3a305e-424b-40a9-9237-7ace1d909fb0&page=queryresults
+[0m15:50:22.862891 [debug] [Thread-2 (]: SQL status: OK in 0.207 seconds
+[0m15:50:22.950313 [debug] [Thread-4 (]: SQL status: OK in 0.146 seconds
+[0m15:50:22.970214 [debug] [Thread-1 (]: SQL status: OK in 0.159 seconds
+[0m15:50:23.150769 [info ] [Thread-3 (]: 3 of 5 PASS source_not_null_raw_spotify_tracks_track_id ........................ [[32mPASS[0m in 1.62s]
+[0m15:50:23.151482 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:50:23.151799 [debug] [Thread-3 (]: Began running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:50:23.152174 [info ] [Thread-3 (]: 5 of 5 START test unique_stg_tracks_track_id ................................... [RUN]
+[0m15:50:23.152598 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3, now test.spotify_analytics.unique_stg_tracks_track_id.29686655df)
+[0m15:50:23.152883 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:50:23.156764 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:50:23.157482 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:50:23.159207 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:50:23.159691 [debug] [Thread-3 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:50:23.159963 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:50:23.222488 [info ] [Thread-2 (]: 2 of 5 PASS not_null_stg_tracks_track_id ....................................... [[32mPASS[0m in 1.70s]
+[0m15:50:23.223001 [error] [Thread-4 (]: 4 of 5 FAIL 16641 source_unique_raw_spotify_tracks_track_id .................... [[31mFAIL 16641[0m in 1.70s]
+[0m15:50:23.223351 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:50:23.223561 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5
+[0m15:50:23.280702 [info ] [Thread-1 (]: 1 of 5 PASS not_null_stg_tracks_duration_minutes ............................... [[32mPASS[0m in 1.75s]
+[0m15:50:23.280973 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:50:24.409618 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:03eb7b17-d922-48ae-897b-a41dee19e535&page=queryresults
+[0m15:50:24.541119 [debug] [Thread-3 (]: SQL status: OK in 0.130 seconds
+[0m15:50:24.830516 [error] [Thread-3 (]: 5 of 5 FAIL 16641 unique_stg_tracks_track_id ................................... [[31mFAIL 16641[0m in 1.68s]
+[0m15:50:24.831547 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:50:24.833819 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:50:24.900504 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:50:24.900724 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1' was properly closed.
+[0m15:50:24.900830 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a' was properly closed.
+[0m15:50:24.900924 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_stg_tracks_track_id.29686655df' was properly closed.
+[0m15:50:24.901011 [debug] [MainThread]: Connection 'test.spotify_analytics.source_unique_raw_spotify_tracks_track_id.69975a21a5' was properly closed.
+[0m15:50:24.901126 [info ] [MainThread]: 
+[0m15:50:24.901248 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 3.93 seconds (3.93s).
+[0m15:50:24.901686 [debug] [MainThread]: Command end result
+[0m15:50:24.911289 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:50:24.911964 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:50:24.914745 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m15:50:24.914874 [info ] [MainThread]: 
+[0m15:50:24.915012 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m15:50:24.915119 [info ] [MainThread]: 
+[0m15:50:24.915255 [error] [MainThread]: [31mFailure in test source_unique_raw_spotify_tracks_track_id (models/staging/_sources.yml)[0m
+[0m15:50:24.915375 [error] [MainThread]:   Got 16641 results, configured to fail if != 0
+[0m15:50:24.915464 [info ] [MainThread]: 
+[0m15:50:24.915567 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/staging/_sources.yml/source_unique_raw_spotify_tracks_track_id.sql
+[0m15:50:24.915663 [info ] [MainThread]: 
+[0m15:50:24.915766 [error] [MainThread]: [31mFailure in test unique_stg_tracks_track_id (models/staging/_staging.yml)[0m
+[0m15:50:24.915867 [error] [MainThread]:   Got 16641 results, configured to fail if != 0
+[0m15:50:24.915944 [info ] [MainThread]: 
+[0m15:50:24.916040 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/staging/_staging.yml/unique_stg_tracks_track_id.sql
+[0m15:50:24.916131 [info ] [MainThread]: 
+[0m15:50:24.916226 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=5
+[0m15:50:24.925816 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 7.6742206, "process_in_blocks": "0", "process_kernel_time": 1.151441, "process_mem_max_rss": "422477824", "process_out_blocks": "0", "process_user_time": 3.030936}
+[0m15:50:24.926010 [debug] [MainThread]: Command `dbt test` failed at 15:50:24.925974 after 7.67 seconds
+[0m15:50:24.926153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ddaae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dda8690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11de87110>]}
+[0m15:50:24.926286 [debug] [MainThread]: Flushing usage events
+[0m15:50:25.611616 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:53:21.515166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a05eb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a055090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0c7fd0>]}
+
+
+============================== 15:53:21.516611 | 9d0e0099-497d-4f73-b381-1248218383f2 ==============================
+[0m15:53:21.516611 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:53:21.516831 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'target_path': 'None', 'introspect': 'True', 'no_print': 'None', 'quiet': 'False', 'invocation_command': 'dbt test', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'write_json': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'debug': 'False', 'log_format': 'default'}
+[0m15:53:23.826362 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119d05c90>]}
+[0m15:53:23.904774 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074f9a90>]}
+[0m15:53:23.905110 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:53:23.995863 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:53:24.041724 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m15:53:24.042058 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/staging/_sources.yml
+[0m15:53:24.042168 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/staging/stg_tracks.sql
+[0m15:53:24.197445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a3dce90>]}
+[0m15:53:24.224076 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:53:24.224856 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:53:24.233031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a783750>]}
+[0m15:53:24.233208 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 538 macros
+[0m15:53:24.233319 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a4674d0>]}
+[0m15:53:24.234051 [info ] [MainThread]: 
+[0m15:53:24.234170 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:53:24.234253 [info ] [MainThread]: 
+[0m15:53:24.234420 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:53:24.235767 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811_dbt_rhys_spotify'
+[0m15:53:24.235902 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:53:24.634032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9d0e0099-497d-4f73-b381-1248218383f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a574650>]}
+[0m15:53:24.634952 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:53:24.702617 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:53:24.702857 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:53:24.703000 [debug] [Thread-3 (]: Began running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:53:24.703283 [debug] [Thread-4 (]: Began running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:53:24.703139 [info ] [Thread-1 (]: 1 of 4 START test not_null_stg_tracks_duration_minutes ......................... [RUN]
+[0m15:53:24.703496 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_tracks_track_id ................................. [RUN]
+[0m15:53:24.703635 [info ] [Thread-3 (]: 3 of 4 START test source_not_null_raw_spotify_tracks_track_id .................. [RUN]
+[0m15:53:24.703765 [info ] [Thread-4 (]: 4 of 4 START test unique_stg_tracks_track_id ................................... [RUN]
+[0m15:53:24.703953 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1)
+[0m15:53:24.704149 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a'
+[0m15:53:24.704313 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3'
+[0m15:53:24.704464 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.spotify_analytics.unique_stg_tracks_track_id.29686655df'
+[0m15:53:24.704591 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:53:24.704708 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:53:24.704822 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:53:24.704932 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:53:24.711159 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:53:24.712631 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:53:24.714015 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:53:24.715994 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:53:24.716363 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:53:24.722495 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:53:24.723984 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:53:24.725447 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:53:24.725583 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:53:24.725695 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:53:24.726626 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:53:24.727551 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:53:24.727692 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:53:24.727847 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select duration_minutes
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where duration_minutes is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:53:24.728077 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:53:24.728254 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:53:24.728385 [debug] [Thread-3 (]: On test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:53:24.728520 [debug] [Thread-4 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:53:24.728740 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:53:24.810484 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:53:25.592242 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:4ea9f902-4dda-4df3-93c1-b375d260a963&page=queryresults
+[0m15:53:25.752238 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:a89d9e32-43c9-48d7-8da9-316195569b98&page=queryresults
+[0m15:53:25.756568 [debug] [Thread-3 (]: SQL status: OK in 0.163 seconds
+[0m15:53:25.757094 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:018f2105-91c4-4afb-979d-960cb537de05&page=queryresults
+[0m15:53:25.765210 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:7c3806e5-5048-4d8d-b27a-4fcb7b9c2ce4&page=queryresults
+[0m15:53:25.905440 [debug] [Thread-4 (]: SQL status: OK in 0.151 seconds
+[0m15:53:25.906384 [debug] [Thread-1 (]: SQL status: OK in 0.140 seconds
+[0m15:53:25.935435 [debug] [Thread-2 (]: SQL status: OK in 0.177 seconds
+[0m15:53:26.092880 [info ] [Thread-3 (]: 3 of 4 PASS source_not_null_raw_spotify_tracks_track_id ........................ [[32mPASS[0m in 1.39s]
+[0m15:53:26.093841 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:53:26.174041 [info ] [Thread-1 (]: 1 of 4 PASS not_null_stg_tracks_duration_minutes ............................... [[32mPASS[0m in 1.47s]
+[0m15:53:26.176052 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:53:26.231087 [error] [Thread-4 (]: 4 of 4 FAIL 16641 unique_stg_tracks_track_id ................................... [[31mFAIL 16641[0m in 1.53s]
+[0m15:53:26.231933 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:53:26.282442 [info ] [Thread-2 (]: 2 of 4 PASS not_null_stg_tracks_track_id ....................................... [[32mPASS[0m in 1.58s]
+[0m15:53:26.283406 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:53:26.285109 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:53:26.350724 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:53:26.350939 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1' was properly closed.
+[0m15:53:26.351044 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a' was properly closed.
+[0m15:53:26.351135 [debug] [MainThread]: Connection 'test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3' was properly closed.
+[0m15:53:26.351216 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_stg_tracks_track_id.29686655df' was properly closed.
+[0m15:53:26.351338 [info ] [MainThread]: 
+[0m15:53:26.351458 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 2.12 seconds (2.12s).
+[0m15:53:26.351862 [debug] [MainThread]: Command end result
+[0m15:53:26.361573 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:53:26.362270 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:53:26.364767 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m15:53:26.364869 [info ] [MainThread]: 
+[0m15:53:26.364986 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:53:26.365080 [info ] [MainThread]: 
+[0m15:53:26.365204 [error] [MainThread]: [31mFailure in test unique_stg_tracks_track_id (models/staging/_staging.yml)[0m
+[0m15:53:26.365313 [error] [MainThread]:   Got 16641 results, configured to fail if != 0
+[0m15:53:26.365396 [info ] [MainThread]: 
+[0m15:53:26.365496 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/staging/_staging.yml/unique_stg_tracks_track_id.sql
+[0m15:53:26.365578 [info ] [MainThread]: 
+[0m15:53:26.365676 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:53:26.367789 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 4.88503, "process_in_blocks": "0", "process_kernel_time": 0.989718, "process_mem_max_rss": "426622976", "process_out_blocks": "0", "process_user_time": 2.842252}
+[0m15:53:26.367958 [debug] [MainThread]: Command `dbt test` failed at 15:53:26.367927 after 4.89 seconds
+[0m15:53:26.368087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a05dd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a0c58d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d0a650>]}
+[0m15:53:26.368222 [debug] [MainThread]: Flushing usage events
+[0m15:53:27.054361 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:54:30.514562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d57cbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5bd410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d58b150>]}
+
+
+============================== 15:54:30.515997 | f9e890e4-495d-4726-bd2e-2d8ba806eccd ==============================
+[0m15:54:30.515997 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:54:30.516224 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'log_cache_events': 'False', 'debug': 'False', 'target_path': 'None', 'version_check': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'profiles_dir': '/Users/rhysorchard/.dbt', 'invocation_command': 'dbt run --select stg_tracks', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'static_parser': 'True', 'cache_selected_only': 'False', 'empty': 'False', 'printer_width': '80', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'write_json': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'partial_parse': 'True'}
+[0m15:54:32.859034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cee3a10>]}
+[0m15:54:32.939697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa20410>]}
+[0m15:54:32.940049 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:54:33.029194 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:54:33.075797 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:54:33.075971 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:54:33.076061 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:54:33.091634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d5f2d50>]}
+[0m15:54:33.120348 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:54:33.121126 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:54:33.126520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d6c38d0>]}
+[0m15:54:33.126692 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 538 macros
+[0m15:54:33.126812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d6ec0d0>]}
+[0m15:54:33.127354 [info ] [MainThread]: 
+[0m15:54:33.127466 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:54:33.127553 [info ] [MainThread]: 
+[0m15:54:33.127723 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:54:33.128033 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m15:54:33.128188 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:54:33.676743 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m15:54:33.677390 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:54:34.063297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d35d0d0>]}
+[0m15:54:34.064256 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:54:34.133366 [debug] [Thread-1 (]: Began running node model.spotify_analytics.stg_tracks
+[0m15:54:34.133754 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_rhys_spotify.stg_tracks ........................ [RUN]
+[0m15:54:34.133976 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.stg_tracks)
+[0m15:54:34.134108 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.stg_tracks
+[0m15:54:34.138073 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.stg_tracks"
+[0m15:54:34.138431 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.stg_tracks
+[0m15:54:34.149864 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.stg_tracks"
+[0m15:54:34.150342 [debug] [Thread-1 (]: On model.spotify_analytics.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.stg_tracks"} */
+
+
+  create or replace view `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  OPTIONS()
+  as with source as (
+
+    select * from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+),
+
+renamed as (
+    select
+       
+        cast(track_id as string) as track_id,
+        cast(track_name as string) as track_name,
+        cast(artists as string) as artist_names,
+        cast(album_name as string) as album_name,
+        
+        lower(trim(track_genre)) as track_genre,
+        
+        cast(popularity as int64) as popularity,
+        
+        cast(danceability as float64) as danceability,
+        cast(energy as float64) as energy,
+        cast(tempo as float64) as tempo,
+        
+        cast(duration_ms as int64) as duration_ms,
+        round(cast(duration_ms as float64) / 60000.0, 2) as duration_minutes
+
+    from source
+    where track_id is not null
+
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY track_id) = 1
+)
+
+select * from renamed;
+
+
+[0m15:54:34.150517 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:54:34.895955 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:6fdb301a-f06e-4102-935e-4c8d756beadb&page=queryresults
+[0m15:54:35.146207 [debug] [Thread-1 (]: SQL status: OK in 0.249 seconds
+[0m15:54:35.199892 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f9e890e4-495d-4726-bd2e-2d8ba806eccd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d728b90>]}
+[0m15:54:35.200268 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_rhys_spotify.stg_tracks ................... [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m15:54:35.200537 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.stg_tracks
+[0m15:54:35.201165 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:54:35.247799 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:54:35.247917 [debug] [MainThread]: Connection 'model.spotify_analytics.stg_tracks' was properly closed.
+[0m15:54:35.248022 [info ] [MainThread]: 
+[0m15:54:35.248129 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.12 seconds (2.12s).
+[0m15:54:35.248365 [debug] [MainThread]: Command end result
+[0m15:54:35.257102 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:54:35.257707 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:54:35.259690 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m15:54:35.259780 [info ] [MainThread]: 
+[0m15:54:35.259917 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:54:35.260013 [info ] [MainThread]: 
+[0m15:54:35.260127 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:54:35.262027 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.7788105, "process_in_blocks": "0", "process_kernel_time": 0.984817, "process_mem_max_rss": "405979136", "process_out_blocks": "0", "process_user_time": 2.598595}
+[0m15:54:35.262181 [debug] [MainThread]: Command `dbt run` succeeded at 15:54:35.262150 after 4.78 seconds
+[0m15:54:35.262293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf450d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d607150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094058d0>]}
+[0m15:54:35.262397 [debug] [MainThread]: Flushing usage events
+[0m15:54:35.878134 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:54:45.782274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0cfdd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c12fd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c12d250>]}
+
+
+============================== 15:54:45.783736 | fc66374f-9602-4eb1-aead-54026ed21bce ==============================
+[0m15:54:45.783736 [info ] [MainThread]: Running with dbt=1.11.5
+[0m15:54:45.783954 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'target_path': 'None', 'no_print': 'None', 'warn_error': 'None', 'use_colors': 'True', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'introspect': 'True', 'empty': 'None', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'log_format': 'default', 'invocation_command': 'dbt test', 'printer_width': '80', 'debug': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'fail_fast': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:54:48.089025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0e74d0>]}
+[0m15:54:48.168267 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109561b50>]}
+[0m15:54:48.168606 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m15:54:48.256938 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m15:54:48.302254 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:54:48.302433 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:54:48.302526 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:54:48.318019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c0f15d0>]}
+[0m15:54:48.347118 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:54:48.347852 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:54:48.356020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c2e7a10>]}
+[0m15:54:48.356209 [info ] [MainThread]: Found 2 models, 4 data tests, 1 source, 538 macros
+[0m15:54:48.356330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c006510>]}
+[0m15:54:48.356990 [info ] [MainThread]: 
+[0m15:54:48.357107 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:54:48.357197 [info ] [MainThread]: 
+[0m15:54:48.357386 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m15:54:48.358752 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811_dbt_rhys_spotify'
+[0m15:54:48.358894 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:54:48.708363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fc66374f-9602-4eb1-aead-54026ed21bce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c170150>]}
+[0m15:54:48.709210 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:54:48.776590 [debug] [Thread-1 (]: Began running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:54:48.776802 [debug] [Thread-2 (]: Began running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:54:48.777000 [debug] [Thread-3 (]: Began running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:54:48.777155 [debug] [Thread-4 (]: Began running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:54:48.777312 [info ] [Thread-1 (]: 1 of 4 START test not_null_stg_tracks_duration_minutes ......................... [RUN]
+[0m15:54:48.777484 [info ] [Thread-2 (]: 2 of 4 START test not_null_stg_tracks_track_id ................................. [RUN]
+[0m15:54:48.777633 [info ] [Thread-3 (]: 3 of 4 START test source_not_null_raw_spotify_tracks_track_id .................. [RUN]
+[0m15:54:48.777770 [info ] [Thread-4 (]: 4 of 4 START test unique_stg_tracks_track_id ................................... [RUN]
+[0m15:54:48.777951 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1)
+[0m15:54:48.778136 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a'
+[0m15:54:48.778306 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3'
+[0m15:54:48.778473 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.spotify_analytics.unique_stg_tracks_track_id.29686655df'
+[0m15:54:48.778602 [debug] [Thread-1 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:54:48.778719 [debug] [Thread-2 (]: Began compiling node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:54:48.778906 [debug] [Thread-3 (]: Began compiling node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:54:48.779021 [debug] [Thread-4 (]: Began compiling node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:54:48.785996 [debug] [Thread-1 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:54:48.787475 [debug] [Thread-2 (]: Writing injected SQL for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:54:48.788891 [debug] [Thread-3 (]: Writing injected SQL for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:54:48.790922 [debug] [Thread-4 (]: Writing injected SQL for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:54:48.791294 [debug] [Thread-2 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:54:48.791433 [debug] [Thread-1 (]: Began executing node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:54:48.799084 [debug] [Thread-2 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"
+[0m15:54:48.799966 [debug] [Thread-1 (]: Writing runtime sql for node "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"
+[0m15:54:48.800079 [debug] [Thread-3 (]: Began executing node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:54:48.800199 [debug] [Thread-4 (]: Began executing node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:54:48.801695 [debug] [Thread-3 (]: Writing runtime sql for node "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"
+[0m15:54:48.802643 [debug] [Thread-4 (]: Writing runtime sql for node "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"
+[0m15:54:48.802781 [debug] [Thread-2 (]: On test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:54:48.802938 [debug] [Thread-1 (]: On test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select duration_minutes
+from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+where duration_minutes is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:54:48.803242 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:54:48.803393 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:54:48.803534 [debug] [Thread-3 (]: On test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select track_id
+from `rhys-project-485811`.`raw_spotify_data`.`Tracks`
+where track_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:54:48.803682 [debug] [Thread-4 (]: On test.spotify_analytics.unique_stg_tracks_track_id.29686655df: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "test.spotify_analytics.unique_stg_tracks_track_id.29686655df"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select track_id as unique_field
+  from `rhys-project-485811`.`dbt_rhys_spotify`.`stg_tracks`
+  where track_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:54:48.844291 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:54:48.885918 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:54:49.641994 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:5caa0f6f-5371-4de4-a6bb-cb195fa7e895&page=queryresults
+[0m15:54:49.789159 [debug] [Thread-3 (]: SQL status: OK in 0.146 seconds
+[0m15:54:49.828517 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:bc52e1e0-e03c-4599-89fa-339e78c2435b&page=queryresults
+[0m15:54:49.857695 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:86c7c8a0-7cd9-4d36-b2a1-be0e7c34c275&page=queryresults
+[0m15:54:49.943103 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:788f0364-cb90-413c-b009-a91f25a7d733&page=queryresults
+[0m15:54:49.967611 [debug] [Thread-2 (]: SQL status: OK in 0.139 seconds
+[0m15:54:49.968328 [debug] [Thread-1 (]: SQL status: OK in 0.110 seconds
+[0m15:54:50.072345 [debug] [Thread-4 (]: SQL status: OK in 0.129 seconds
+[0m15:54:50.174556 [info ] [Thread-3 (]: 3 of 4 PASS source_not_null_raw_spotify_tracks_track_id ........................ [[32mPASS[0m in 1.40s]
+[0m15:54:50.175385 [debug] [Thread-3 (]: Finished running node test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3
+[0m15:54:50.213185 [info ] [Thread-2 (]: 2 of 4 PASS not_null_stg_tracks_track_id ....................................... [[32mPASS[0m in 1.43s]
+[0m15:54:50.213795 [debug] [Thread-2 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a
+[0m15:54:50.239211 [info ] [Thread-1 (]: 1 of 4 PASS not_null_stg_tracks_duration_minutes ............................... [[32mPASS[0m in 1.46s]
+[0m15:54:50.240068 [debug] [Thread-1 (]: Finished running node test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1
+[0m15:54:50.363633 [info ] [Thread-4 (]: 4 of 4 PASS unique_stg_tracks_track_id ......................................... [[32mPASS[0m in 1.58s]
+[0m15:54:50.364758 [debug] [Thread-4 (]: Finished running node test.spotify_analytics.unique_stg_tracks_track_id.29686655df
+[0m15:54:50.366535 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:54:50.430120 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:54:50.430248 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_duration_minutes.547712ccc1' was properly closed.
+[0m15:54:50.430342 [debug] [MainThread]: Connection 'test.spotify_analytics.not_null_stg_tracks_track_id.692df9de6a' was properly closed.
+[0m15:54:50.430428 [debug] [MainThread]: Connection 'test.spotify_analytics.source_not_null_raw_spotify_tracks_track_id.be8fa1f4c3' was properly closed.
+[0m15:54:50.430509 [debug] [MainThread]: Connection 'test.spotify_analytics.unique_stg_tracks_track_id.29686655df' was properly closed.
+[0m15:54:50.430626 [info ] [MainThread]: 
+[0m15:54:50.430743 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 2.07 seconds (2.07s).
+[0m15:54:50.431138 [debug] [MainThread]: Command end result
+[0m15:54:50.440959 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m15:54:50.441651 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m15:54:50.444239 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m15:54:50.444336 [info ] [MainThread]: 
+[0m15:54:50.444461 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:54:50.444551 [info ] [MainThread]: 
+[0m15:54:50.444650 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m15:54:50.446681 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 4.697229, "process_in_blocks": "0", "process_kernel_time": 0.974787, "process_mem_max_rss": "417562624", "process_out_blocks": "0", "process_user_time": 2.700962}
+[0m15:54:50.446854 [debug] [MainThread]: Command `dbt test` succeeded at 15:54:50.446821 after 4.70 seconds
+[0m15:54:50.446982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c143110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c140b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107e99e50>]}
+[0m15:54:50.447114 [debug] [MainThread]: Flushing usage events
+[0m15:54:51.114942 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:59:01.446120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c19fed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c207d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf38090>]}
+
+
+============================== 13:59:01.449437 | d5f86649-6ee5-4a89-acb4-e5ff76dbc6ab ==============================
+[0m13:59:01.449437 [info ] [MainThread]: Running with dbt=1.11.5
+[0m13:59:01.449797 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'warn_error': 'None', 'profiles_dir': '/Users/rhysorchard/.dbt', 'use_colors': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'debug': 'False', 'target_path': 'None', 'invocation_command': 'dbt run --select marts', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'partial_parse': 'True', 'introspect': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'quiet': 'False'}
+[0m13:59:04.724065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1ad810>]}
+[0m13:59:04.803967 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109634310>]}
+[0m13:59:04.804316 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m13:59:04.908831 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m13:59:04.962374 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m13:59:04.962610 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/marts/dim_genres.sql
+[0m13:59:04.962720 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/marts/dim_artists.sql
+[0m13:59:04.962811 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/marts/dim_tracks.sql
+[0m13:59:04.962895 [debug] [MainThread]: Partial parsing: added file: spotify_analytics://models/marts/fact_tracks.sql
+[0m13:59:05.049985 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bc4c6d0>]}
+[0m13:59:05.078292 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m13:59:05.079247 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m13:59:05.089219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4ae450>]}
+[0m13:59:05.089391 [info ] [MainThread]: Found 6 models, 4 data tests, 1 source, 538 macros
+[0m13:59:05.089507 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1bec50>]}
+[0m13:59:05.090108 [info ] [MainThread]: 
+[0m13:59:05.090228 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m13:59:05.090315 [info ] [MainThread]: 
+[0m13:59:05.090479 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m13:59:05.091862 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m13:59:05.091990 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:59:05.618666 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m13:59:05.619279 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m13:59:06.062132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bdd52d0>]}
+[0m13:59:06.063192 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:59:06.128076 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_genres
+[0m13:59:06.128252 [debug] [Thread-2 (]: Began running node model.spotify_analytics.fact_tracks
+[0m13:59:06.128524 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_rhys_spotify.dim_genres ....................... [RUN]
+[0m13:59:06.128747 [info ] [Thread-2 (]: 2 of 2 START sql table model dbt_rhys_spotify.fact_tracks ...................... [RUN]
+[0m13:59:06.128939 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.dim_genres)
+[0m13:59:06.129121 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m13:59:06.129249 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_genres
+[0m13:59:06.129364 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m13:59:06.132651 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_genres"
+[0m13:59:06.134130 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m13:59:06.134501 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m13:59:06.134632 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_genres
+[0m13:59:06.148727 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m13:59:06.149761 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_genres"
+[0m13:59:06.150137 [debug] [Thread-1 (]: On model.spotify_analytics.dim_genres: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_genres"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_genres`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_genre AS genre_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE track_genre IS NOT NULL
+    );
+  
+[0m13:59:06.150319 [debug] [Thread-2 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`fact_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT
+    track_id,
+    artists AS artist_name,
+    track_genre AS genre_name,
+    popularity,
+    popularity_bucket,
+    duration_minutes,
+    duration_category,
+    tempo,
+    tempo_category,
+    danceability,
+    energy,
+    valence
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m13:59:06.150455 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m13:59:06.150563 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:59:07.086539 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:500dd606-5136-4170-ac59-5a08ba2cb91e&page=queryresults
+[0m13:59:07.346620 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:33b54378-5a1a-425d-9f7c-dd7e72c2d4c3&page=queryresults
+[0m13:59:07.456498 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:500dd606-5136-4170-ac59-5a08ba2cb91e&page=queryresults
+[0m13:59:07.471071 [debug] [Thread-2 (]: Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: artists at [18:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql
+[0m13:59:07.472913 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c399e90>]}
+[0m13:59:07.473486 [error] [Thread-2 (]: 2 of 2 ERROR creating sql table model dbt_rhys_spotify.fact_tracks ............. [[31mERROR[0m in 1.34s]
+[0m13:59:07.473872 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m13:59:07.474228 [debug] [Thread-7 (]: Marking all children of 'model.spotify_analytics.fact_tracks' to be skipped because of status 'error'.  Reason: Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: artists at [18:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql.
+[0m13:59:09.418039 [debug] [Thread-1 (]: SQL status: OK in 2.070 seconds
+[0m13:59:09.645320 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd5f86649-6ee5-4a89-acb4-e5ff76dbc6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c479210>]}
+[0m13:59:09.645957 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_rhys_spotify.dim_genres .................. [[32mCREATE TABLE (113.0 rows, 3.6 MiB processed)[0m in 3.52s]
+[0m13:59:09.646356 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_genres
+[0m13:59:09.647409 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m13:59:09.705073 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:59:09.705181 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_genres' was properly closed.
+[0m13:59:09.705268 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m13:59:09.705391 [info ] [MainThread]: 
+[0m13:59:09.705509 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 4.61 seconds (4.61s).
+[0m13:59:09.705792 [debug] [MainThread]: Command end result
+[0m13:59:09.715600 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m13:59:09.716280 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m13:59:09.718654 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m13:59:09.718745 [info ] [MainThread]: 
+[0m13:59:09.718861 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m13:59:09.718952 [info ] [MainThread]: 
+[0m13:59:09.719069 [error] [MainThread]: [31mFailure in model fact_tracks (models/marts/fact_tracks.sql)[0m
+[0m13:59:09.719183 [error] [MainThread]:   Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: artists at [18:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql
+[0m13:59:09.719267 [info ] [MainThread]: 
+[0m13:59:09.719366 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/fact_tracks.sql
+[0m13:59:09.719451 [info ] [MainThread]: 
+[0m13:59:09.719548 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=2
+[0m13:59:09.731621 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.407968, "process_in_blocks": "0", "process_kernel_time": 1.196797, "process_mem_max_rss": "415186944", "process_out_blocks": "0", "process_user_time": 2.845643}
+[0m13:59:09.731827 [debug] [MainThread]: Command `dbt run` failed at 13:59:09.731790 after 8.41 seconds
+[0m13:59:09.731968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1f9b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1fa0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bb3a390>]}
+[0m13:59:09.732097 [debug] [MainThread]: Flushing usage events
+[0m13:59:10.463528 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:01:09.998454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a0f990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a0d910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109aa0790>]}
+
+
+============================== 14:01:10.000062 | dd587313-0e7e-4ae3-aa01-9c86b97f4816 ==============================
+[0m14:01:10.000062 [info ] [MainThread]: Running with dbt=1.11.5
+[0m14:01:10.000296 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_format': 'default', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'introspect': 'True', 'no_print': 'None', 'fail_fast': 'False', 'empty': 'False', 'partial_parse': 'True', 'version_check': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'profiles_dir': '/Users/rhysorchard/.dbt', 'invocation_command': 'dbt run --select marts', 'quiet': 'False', 'cache_selected_only': 'False'}
+[0m14:01:12.332415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1195df3d0>]}
+[0m14:01:12.411806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ea9610>]}
+[0m14:01:12.412168 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m14:01:12.500981 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m14:01:12.547372 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m14:01:12.547636 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m14:01:12.547762 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_artists.sql
+[0m14:01:12.631943 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119b49dd0>]}
+[0m14:01:12.660439 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:01:12.661193 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:01:12.666417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119d1ec50>]}
+[0m14:01:12.666583 [info ] [MainThread]: Found 6 models, 4 data tests, 1 source, 538 macros
+[0m14:01:12.666699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119accd10>]}
+[0m14:01:12.667294 [info ] [MainThread]: 
+[0m14:01:12.667417 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:01:12.667510 [info ] [MainThread]: 
+[0m14:01:12.667680 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:01:12.669078 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m14:01:12.669218 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:01:13.151913 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m14:01:13.152565 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:01:13.549069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119b69710>]}
+[0m14:01:13.549790 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:01:13.614505 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_artists
+[0m14:01:13.614670 [debug] [Thread-2 (]: Began running node model.spotify_analytics.dim_genres
+[0m14:01:13.614791 [debug] [Thread-3 (]: Began running node model.spotify_analytics.fact_tracks
+[0m14:01:13.614992 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_rhys_spotify.dim_artists ...................... [RUN]
+[0m14:01:13.615179 [info ] [Thread-2 (]: 2 of 3 START sql table model dbt_rhys_spotify.dim_genres ....................... [RUN]
+[0m14:01:13.615349 [info ] [Thread-3 (]: 3 of 3 START sql table model dbt_rhys_spotify.fact_tracks ...................... [RUN]
+[0m14:01:13.615515 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.dim_artists)
+[0m14:01:13.615773 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_genres'
+[0m14:01:13.615939 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m14:01:13.616064 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_artists
+[0m14:01:13.616180 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.dim_genres
+[0m14:01:13.616291 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m14:01:13.619868 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_artists"
+[0m14:01:13.620956 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.dim_genres"
+[0m14:01:13.621986 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m14:01:13.622313 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_artists
+[0m14:01:13.622438 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.dim_genres
+[0m14:01:13.636785 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_artists"
+[0m14:01:13.637655 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:01:13.637780 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m14:01:13.638853 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m14:01:13.681097 [debug] [Thread-1 (]: On model.spotify_analytics.dim_artists: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_artists"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_artists`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    artist_names AS artist_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE artists IS NOT NULL
+    );
+  
+[0m14:01:13.681252 [debug] [Thread-3 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`fact_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT
+    track_id,
+    artist_names AS artist_name,
+    track_genre AS genre_name,
+    popularity,
+    popularity_bucket,
+    duration_minutes,
+    duration_category,
+    tempo,
+    tempo_category,
+    danceability,
+    energy,
+    valence
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m14:01:13.681530 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:01:13.681702 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:01:14.095153 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.dim_genres"
+[0m14:01:14.097414 [debug] [Thread-2 (]: On model.spotify_analytics.dim_genres: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_genres"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_genres`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_genre AS genre_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE track_genre IS NOT NULL
+    );
+  
+[0m14:01:14.706308 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:78a13460-f7e6-45ab-bc5a-62eb223ef1da&page=queryresults
+[0m14:01:14.738987 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:eec9844f-4657-4944-af84-302057f028f2&page=queryresults
+[0m14:01:14.848175 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:eec9844f-4657-4944-af84-302057f028f2&page=queryresults
+[0m14:01:14.859107 [debug] [Thread-1 (]: Database Error in model dim_artists (models/marts/dim_artists.sql)
+  Unrecognized name: artists at [19:7]
+  compiled code at target/run/spotify_analytics/models/marts/dim_artists.sql
+[0m14:01:14.860822 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a23f90>]}
+[0m14:01:14.861433 [error] [Thread-1 (]: 1 of 3 ERROR creating sql table model dbt_rhys_spotify.dim_artists ............. [[31mERROR[0m in 1.24s]
+[0m14:01:14.861860 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_artists
+[0m14:01:14.862309 [debug] [Thread-7 (]: Marking all children of 'model.spotify_analytics.dim_artists' to be skipped because of status 'error'.  Reason: Database Error in model dim_artists (models/marts/dim_artists.sql)
+  Unrecognized name: artists at [19:7]
+  compiled code at target/run/spotify_analytics/models/marts/dim_artists.sql.
+[0m14:01:14.928336 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:9a8a26c9-e26d-4d26-a867-5cb588a867e2&page=queryresults
+[0m14:01:14.997356 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:78a13460-f7e6-45ab-bc5a-62eb223ef1da&page=queryresults
+[0m14:01:15.008599 [debug] [Thread-3 (]: Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: valence at [28:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql
+[0m14:01:15.009067 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119df20d0>]}
+[0m14:01:15.009549 [error] [Thread-3 (]: 3 of 3 ERROR creating sql table model dbt_rhys_spotify.fact_tracks ............. [[31mERROR[0m in 1.39s]
+[0m14:01:15.009956 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m14:01:15.010317 [debug] [Thread-7 (]: Marking all children of 'model.spotify_analytics.fact_tracks' to be skipped because of status 'error'.  Reason: Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: valence at [28:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql.
+[0m14:01:17.599188 [debug] [Thread-2 (]: SQL status: OK in 2.670 seconds
+[0m14:01:17.861406 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dd587313-0e7e-4ae3-aa01-9c86b97f4816', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119cf2fd0>]}
+[0m14:01:17.861974 [info ] [Thread-2 (]: 2 of 3 OK created sql table model dbt_rhys_spotify.dim_genres .................. [[32mCREATE TABLE (113.0 rows, 3.6 MiB processed)[0m in 4.25s]
+[0m14:01:17.862337 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.dim_genres
+[0m14:01:17.863262 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:01:17.918910 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:01:17.919074 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_artists' was properly closed.
+[0m14:01:17.919160 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_genres' was properly closed.
+[0m14:01:17.919242 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m14:01:17.919370 [info ] [MainThread]: 
+[0m14:01:17.919487 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 5.25 seconds (5.25s).
+[0m14:01:17.919812 [debug] [MainThread]: Command end result
+[0m14:01:17.929287 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:01:17.929977 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:01:17.932172 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m14:01:17.932266 [info ] [MainThread]: 
+[0m14:01:17.932385 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m14:01:17.932479 [info ] [MainThread]: 
+[0m14:01:17.932598 [error] [MainThread]: [31mFailure in model dim_artists (models/marts/dim_artists.sql)[0m
+[0m14:01:17.932708 [error] [MainThread]:   Database Error in model dim_artists (models/marts/dim_artists.sql)
+  Unrecognized name: artists at [19:7]
+  compiled code at target/run/spotify_analytics/models/marts/dim_artists.sql
+[0m14:01:17.932793 [info ] [MainThread]: 
+[0m14:01:17.932890 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/dim_artists.sql
+[0m14:01:17.932973 [info ] [MainThread]: 
+[0m14:01:17.933077 [error] [MainThread]: [31mFailure in model fact_tracks (models/marts/fact_tracks.sql)[0m
+[0m14:01:17.933180 [error] [MainThread]:   Database Error in model fact_tracks (models/marts/fact_tracks.sql)
+  Unrecognized name: valence at [28:5]
+  compiled code at target/run/spotify_analytics/models/marts/fact_tracks.sql
+[0m14:01:17.933258 [info ] [MainThread]: 
+[0m14:01:17.933352 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/fact_tracks.sql
+[0m14:01:17.933433 [info ] [MainThread]: 
+[0m14:01:17.933529 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=2 SKIP=0 NO-OP=0 TOTAL=3
+[0m14:01:17.935546 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 7.970635, "process_in_blocks": "0", "process_kernel_time": 1.022832, "process_mem_max_rss": "417726464", "process_out_blocks": "0", "process_user_time": 2.80774}
+[0m14:01:17.935711 [debug] [MainThread]: Command `dbt run` failed at 14:01:17.935679 after 7.97 seconds
+[0m14:01:17.935838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a785d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a0dfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11a2f5c50>]}
+[0m14:01:17.935961 [debug] [MainThread]: Flushing usage events
+[0m14:01:18.633013 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:04:27.406785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfc1dd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfc2f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c034f10>]}
+
+
+============================== 14:04:27.408308 | 76da2dff-b21f-454c-9d18-70fc0d284108 ==============================
+[0m14:04:27.408308 [info ] [MainThread]: Running with dbt=1.11.5
+[0m14:04:27.408529 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'version_check': 'True', 'fail_fast': 'False', 'empty': 'False', 'no_print': 'None', 'printer_width': '80', 'static_parser': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'invocation_command': 'dbt run --select marts', 'write_json': 'True', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/rhysorchard/.dbt', 'cache_selected_only': 'False', 'quiet': 'False', 'debug': 'False'}
+[0m14:04:29.801552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bff4250>]}
+[0m14:04:29.881880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109421690>]}
+[0m14:04:29.882224 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m14:04:29.972630 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m14:04:30.020078 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m14:04:30.020348 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_artists.sql
+[0m14:04:30.020483 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_tracks.sql
+[0m14:04:30.020599 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/fact_tracks.sql
+[0m14:04:30.106508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfd0210>]}
+[0m14:04:30.134836 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:04:30.135591 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:04:30.140864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c3c3e50>]}
+[0m14:04:30.141037 [info ] [MainThread]: Found 6 models, 4 data tests, 1 source, 538 macros
+[0m14:04:30.141147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c1af610>]}
+[0m14:04:30.141765 [info ] [MainThread]: 
+[0m14:04:30.141891 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:04:30.141976 [info ] [MainThread]: 
+[0m14:04:30.142143 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:04:30.143562 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m14:04:30.143699 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:30.733614 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m14:04:30.734792 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:31.131568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bc5aa90>]}
+[0m14:04:31.132419 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:31.199232 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_artists
+[0m14:04:31.199454 [debug] [Thread-2 (]: Began running node model.spotify_analytics.dim_genres
+[0m14:04:31.199592 [debug] [Thread-3 (]: Began running node model.spotify_analytics.dim_tracks
+[0m14:04:31.199752 [debug] [Thread-4 (]: Began running node model.spotify_analytics.fact_tracks
+[0m14:04:31.199958 [info ] [Thread-1 (]: 1 of 4 START sql view model dbt_rhys_spotify.dim_artists ....................... [RUN]
+[0m14:04:31.200173 [info ] [Thread-2 (]: 2 of 4 START sql table model dbt_rhys_spotify.dim_genres ....................... [RUN]
+[0m14:04:31.200413 [info ] [Thread-3 (]: 3 of 4 START sql table model dbt_rhys_spotify.dim_tracks ....................... [RUN]
+[0m14:04:31.200587 [info ] [Thread-4 (]: 4 of 4 START sql table model dbt_rhys_spotify.fact_tracks ...................... [RUN]
+[0m14:04:31.200767 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.dim_artists)
+[0m14:04:31.200941 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_genres'
+[0m14:04:31.201104 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_tracks'
+[0m14:04:31.201256 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m14:04:31.201387 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_artists
+[0m14:04:31.201510 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.dim_genres
+[0m14:04:31.201622 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.dim_tracks
+[0m14:04:31.201734 [debug] [Thread-4 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m14:04:31.205162 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_artists"
+[0m14:04:31.206269 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.dim_genres"
+[0m14:04:31.207312 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.dim_tracks"
+[0m14:04:31.208341 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m14:04:31.208707 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_artists
+[0m14:04:31.208863 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.dim_genres
+[0m14:04:31.219270 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_artists"
+[0m14:04:31.219424 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.dim_tracks
+[0m14:04:31.223139 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:04:31.223286 [debug] [Thread-4 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m14:04:31.231071 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.dim_tracks"
+[0m14:04:31.232033 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m14:04:31.232180 [debug] [Thread-1 (]: On model.spotify_analytics.dim_artists: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_artists"} */
+
+
+  create or replace view `rhys-project-485811`.`dbt_rhys_spotify`.`dim_artists`
+  OPTIONS()
+  as SELECT DISTINCT
+    artist_names AS artist_name 
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE artist_names IS NOT NULL;
+
+
+[0m14:04:31.274130 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:04:31.314436 [debug] [Thread-4 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`fact_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT
+    track_id,
+    artist_names AS artist_name,
+    track_genre AS genre_name,
+    popularity,
+    popularity_bucket,
+    duration_minutes,
+    duration_category,
+    tempo,
+    tempo_category,
+    danceability,
+    energy
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m14:04:31.314569 [debug] [Thread-3 (]: On model.spotify_analytics.dim_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_id,
+    track_name,
+    album_name,
+    explicit
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m14:04:31.316801 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:04:31.316931 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:04:31.722780 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.dim_genres"
+[0m14:04:31.724806 [debug] [Thread-2 (]: On model.spotify_analytics.dim_genres: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_genres"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_genres`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_genre AS genre_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE track_genre IS NOT NULL
+    );
+  
+[0m14:04:32.239310 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:5fefe0a4-56cb-4a83-8465-d777e27cb0d3&page=queryresults
+[0m14:04:32.379190 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:dfff9816-ce75-44a4-a578-35d1d3ab10c2&page=queryresults
+[0m14:04:32.413899 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:58681bf6-10fe-41e1-b3a4-c1055f381a6c&page=queryresults
+[0m14:04:32.425088 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:91a9e379-1ac1-4da9-847a-58228442c1fc&page=queryresults
+[0m14:04:32.530264 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:91a9e379-1ac1-4da9-847a-58228442c1fc&page=queryresults
+[0m14:04:32.540779 [debug] [Thread-3 (]: Database Error in model dim_tracks (models/marts/dim_tracks.sql)
+  Unrecognized name: explicit at [20:5]
+  compiled code at target/run/spotify_analytics/models/marts/dim_tracks.sql
+[0m14:04:32.542390 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4feed0>]}
+[0m14:04:32.542970 [error] [Thread-3 (]: 3 of 4 ERROR creating sql table model dbt_rhys_spotify.dim_tracks .............. [[31mERROR[0m in 1.34s]
+[0m14:04:32.543400 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.dim_tracks
+[0m14:04:32.543842 [debug] [Thread-7 (]: Marking all children of 'model.spotify_analytics.dim_tracks' to be skipped because of status 'error'.  Reason: Database Error in model dim_tracks (models/marts/dim_tracks.sql)
+  Unrecognized name: explicit at [20:5]
+  compiled code at target/run/spotify_analytics/models/marts/dim_tracks.sql.
+[0m14:04:32.711054 [debug] [Thread-1 (]: SQL status: OK in 0.470 seconds
+[0m14:04:32.761645 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4fcad0>]}
+[0m14:04:32.761990 [info ] [Thread-1 (]: 1 of 4 OK created sql view model dbt_rhys_spotify.dim_artists .................. [[32mCREATE VIEW (0 processed)[0m in 1.56s]
+[0m14:04:32.762240 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_artists
+[0m14:04:35.251701 [debug] [Thread-2 (]: SQL status: OK in 2.871 seconds
+[0m14:04:35.441383 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4a52d0>]}
+[0m14:04:35.442427 [info ] [Thread-2 (]: 2 of 4 OK created sql table model dbt_rhys_spotify.dim_genres .................. [[32mCREATE TABLE (113.0 rows, 3.6 MiB processed)[0m in 4.24s]
+[0m14:04:35.442975 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.dim_genres
+[0m14:04:35.958124 [debug] [Thread-4 (]: SQL status: OK in 3.543 seconds
+[0m14:04:36.100806 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '76da2dff-b21f-454c-9d18-70fc0d284108', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4f2f50>]}
+[0m14:04:36.101925 [info ] [Thread-4 (]: 4 of 4 OK created sql table model dbt_rhys_spotify.fact_tracks ................. [[32mCREATE TABLE (89.7k rows, 10.0 MiB processed)[0m in 4.90s]
+[0m14:04:36.102610 [debug] [Thread-4 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m14:04:36.103993 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:36.165632 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:36.165738 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_artists' was properly closed.
+[0m14:04:36.165825 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_genres' was properly closed.
+[0m14:04:36.165906 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_tracks' was properly closed.
+[0m14:04:36.165987 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m14:04:36.166116 [info ] [MainThread]: 
+[0m14:04:36.166238 [info ] [MainThread]: Finished running 3 table models, 1 view model in 0 hours 0 minutes and 6.02 seconds (6.02s).
+[0m14:04:36.166623 [debug] [MainThread]: Command end result
+[0m14:04:36.176739 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:04:36.177441 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:04:36.179723 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m14:04:36.179819 [info ] [MainThread]: 
+[0m14:04:36.179935 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:04:36.180028 [info ] [MainThread]: 
+[0m14:04:36.180146 [error] [MainThread]: [31mFailure in model dim_tracks (models/marts/dim_tracks.sql)[0m
+[0m14:04:36.180257 [error] [MainThread]:   Database Error in model dim_tracks (models/marts/dim_tracks.sql)
+  Unrecognized name: explicit at [20:5]
+  compiled code at target/run/spotify_analytics/models/marts/dim_tracks.sql
+[0m14:04:36.180343 [info ] [MainThread]: 
+[0m14:04:36.180444 [info ] [MainThread]:   compiled code at target/compiled/spotify_analytics/models/marts/dim_tracks.sql
+[0m14:04:36.180531 [info ] [MainThread]: 
+[0m14:04:36.180628 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:04:36.182656 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 8.80879, "process_in_blocks": "0", "process_kernel_time": 1.058545, "process_mem_max_rss": "420610048", "process_out_blocks": "0", "process_user_time": 2.925837}
+[0m14:04:36.182819 [debug] [MainThread]: Command `dbt run` failed at 14:04:36.182788 after 8.81 seconds
+[0m14:04:36.182957 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c01fb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c1be210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd58150>]}
+[0m14:04:36.183069 [debug] [MainThread]: Flushing usage events
+[0m14:04:36.899421 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:07:18.587884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bee7990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf1d410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf53fd0>]}
+
+
+============================== 14:07:18.589453 | e8be2dc0-a46f-49c2-97e5-c9c91b100243 ==============================
+[0m14:07:18.589453 [info ] [MainThread]: Running with dbt=1.11.5
+[0m14:07:18.589672 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'use_colors': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'no_print': 'None', 'fail_fast': 'False', 'debug': 'False', 'partial_parse': 'True', 'empty': 'False', 'cache_selected_only': 'False', 'log_path': '/Users/rhysorchard/cbf-spotify-dbt-analytics/logs', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt run --select marts', 'printer_width': '80', 'introspect': 'True', 'write_json': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'profiles_dir': '/Users/rhysorchard/.dbt'}
+[0m14:07:20.962652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bef98d0>]}
+[0m14:07:21.042001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109348d90>]}
+[0m14:07:21.042332 [info ] [MainThread]: Registered adapter: bigquery=1.11.0
+[0m14:07:21.131125 [debug] [MainThread]: checksum: 917838c7befe257b9b22a76c21e5785f6f23ac83ef0336e2870f03c9c3f28402, vars: {}, profile: , target: , version: 1.11.5
+[0m14:07:21.178733 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m14:07:21.179075 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_artists.sql
+[0m14:07:21.179206 [debug] [MainThread]: Partial parsing: updated file: spotify_analytics://models/marts/dim_tracks.sql
+[0m14:07:21.264234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf0b290>]}
+[0m14:07:21.292853 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:07:21.293654 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:07:21.298865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c32b350>]}
+[0m14:07:21.299032 [info ] [MainThread]: Found 6 models, 4 data tests, 1 source, 538 macros
+[0m14:07:21.299149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11bda7b10>]}
+[0m14:07:21.299776 [info ] [MainThread]: 
+[0m14:07:21.299902 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:07:21.299987 [info ] [MainThread]: 
+[0m14:07:21.300151 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m14:07:21.301568 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_rhys-project-485811'
+[0m14:07:21.301714 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:07:21.849889 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_rhys-project-485811, now list_rhys-project-485811_dbt_rhys_spotify)
+[0m14:07:21.850862 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:07:22.259442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ba1bbd0>]}
+[0m14:07:22.260233 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:07:22.324615 [debug] [Thread-1 (]: Began running node model.spotify_analytics.dim_artists
+[0m14:07:22.324790 [debug] [Thread-2 (]: Began running node model.spotify_analytics.dim_genres
+[0m14:07:22.325144 [debug] [Thread-3 (]: Began running node model.spotify_analytics.dim_tracks
+[0m14:07:22.325315 [debug] [Thread-4 (]: Began running node model.spotify_analytics.fact_tracks
+[0m14:07:22.325010 [info ] [Thread-1 (]: 1 of 4 START sql table model dbt_rhys_spotify.dim_artists ...................... [RUN]
+[0m14:07:22.325613 [info ] [Thread-2 (]: 2 of 4 START sql table model dbt_rhys_spotify.dim_genres ....................... [RUN]
+[0m14:07:22.325822 [info ] [Thread-3 (]: 3 of 4 START sql table model dbt_rhys_spotify.dim_tracks ....................... [RUN]
+[0m14:07:22.326004 [info ] [Thread-4 (]: 4 of 4 START sql table model dbt_rhys_spotify.fact_tracks ...................... [RUN]
+[0m14:07:22.326176 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_rhys-project-485811_dbt_rhys_spotify, now model.spotify_analytics.dim_artists)
+[0m14:07:22.326349 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_genres'
+[0m14:07:22.326503 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.spotify_analytics.dim_tracks'
+[0m14:07:22.326658 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.spotify_analytics.fact_tracks'
+[0m14:07:22.326781 [debug] [Thread-1 (]: Began compiling node model.spotify_analytics.dim_artists
+[0m14:07:22.326893 [debug] [Thread-2 (]: Began compiling node model.spotify_analytics.dim_genres
+[0m14:07:22.327003 [debug] [Thread-3 (]: Began compiling node model.spotify_analytics.dim_tracks
+[0m14:07:22.327113 [debug] [Thread-4 (]: Began compiling node model.spotify_analytics.fact_tracks
+[0m14:07:22.330602 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_analytics.dim_artists"
+[0m14:07:22.331704 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_analytics.dim_genres"
+[0m14:07:22.332736 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_analytics.dim_tracks"
+[0m14:07:22.333759 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_analytics.fact_tracks"
+[0m14:07:22.334114 [debug] [Thread-1 (]: Began executing node model.spotify_analytics.dim_artists
+[0m14:07:22.334244 [debug] [Thread-3 (]: Began executing node model.spotify_analytics.dim_tracks
+[0m14:07:22.334348 [debug] [Thread-2 (]: Began executing node model.spotify_analytics.dim_genres
+[0m14:07:22.339692 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:07:22.349698 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_analytics.dim_tracks"
+[0m14:07:22.349824 [debug] [Thread-4 (]: Began executing node model.spotify_analytics.fact_tracks
+[0m14:07:22.350672 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m14:07:22.351561 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:07:22.433053 [debug] [Thread-3 (]: On model.spotify_analytics.dim_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_id,
+    track_name,
+    album_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m14:07:22.474651 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:07:22.866002 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_analytics.dim_genres"
+[0m14:07:22.868441 [debug] [Thread-2 (]: On model.spotify_analytics.dim_genres: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_genres"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_genres`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT DISTINCT
+    track_genre AS genre_name
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE track_genre IS NOT NULL
+    );
+  
+[0m14:07:22.887729 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_analytics.fact_tracks"
+[0m14:07:22.889546 [debug] [Thread-4 (]: On model.spotify_analytics.fact_tracks: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.fact_tracks"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`fact_tracks`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+
+SELECT
+    track_id,
+    artist_names AS artist_name,
+    track_genre AS genre_name,
+    popularity,
+    popularity_bucket,
+    duration_minutes,
+    duration_category,
+    tempo,
+    tempo_category,
+    danceability,
+    energy
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+    );
+  
+[0m14:07:22.935787 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_analytics.dim_artists"
+[0m14:07:22.938019 [debug] [Thread-1 (]: On model.spotify_analytics.dim_artists: /* {"app": "dbt", "dbt_version": "1.11.5", "profile_name": "spotify_analytics", "target_name": "dev", "node_id": "model.spotify_analytics.dim_artists"} */
+
+  
+    
+
+    create or replace table `rhys-project-485811`.`dbt_rhys_spotify`.`dim_artists`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      
+SELECT DISTINCT
+    artist_names AS artist_name 
+FROM `rhys-project-485811`.`dbt_rhys_spotify`.`int_tracks_enriched`
+WHERE artist_names IS NOT NULL
+    );
+  
+[0m14:07:23.584457 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:6c7f1136-044a-4b12-83a0-3c747e42a858&page=queryresults
+[0m14:07:23.586878 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:8d2ff621-d8fa-4cf3-9c35-6269b32506fb&page=queryresults
+[0m14:07:23.587540 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:5b07bc29-a6a5-4eb8-945f-beb9467e5816&page=queryresults
+[0m14:07:23.677865 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=rhys-project-485811&j=bq:EU:cb010b91-5311-4659-8c30-582e3597fcd0&page=queryresults
+[0m14:07:25.671968 [debug] [Thread-1 (]: SQL status: OK in 1.993 seconds
+[0m14:07:25.877623 [debug] [Thread-3 (]: SQL status: OK in 2.287 seconds
+[0m14:07:25.881140 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c4159d0>]}
+[0m14:07:25.881678 [info ] [Thread-1 (]: 1 of 4 OK created sql table model dbt_rhys_spotify.dim_artists ................. [[32mCREATE TABLE (31.4k rows, 4.6 MiB processed)[0m in 3.55s]
+[0m14:07:25.882055 [debug] [Thread-1 (]: Finished running node model.spotify_analytics.dim_artists
+[0m14:07:25.924394 [debug] [Thread-2 (]: SQL status: OK in 2.335 seconds
+[0m14:07:26.020979 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c75d790>]}
+[0m14:07:26.022145 [info ] [Thread-3 (]: 3 of 4 OK created sql table model dbt_rhys_spotify.dim_tracks .................. [[32mCREATE TABLE (89.7k rows, 7.3 MiB processed)[0m in 3.69s]
+[0m14:07:26.022900 [debug] [Thread-3 (]: Finished running node model.spotify_analytics.dim_tracks
+[0m14:07:26.093881 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c32b510>]}
+[0m14:07:26.094833 [info ] [Thread-2 (]: 2 of 4 OK created sql table model dbt_rhys_spotify.dim_genres .................. [[32mCREATE TABLE (113.0 rows, 3.6 MiB processed)[0m in 3.77s]
+[0m14:07:26.095316 [debug] [Thread-2 (]: Finished running node model.spotify_analytics.dim_genres
+[0m14:07:26.118949 [debug] [Thread-4 (]: SQL status: OK in 2.531 seconds
+[0m14:07:26.264214 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e8be2dc0-a46f-49c2-97e5-c9c91b100243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c349d90>]}
+[0m14:07:26.265298 [info ] [Thread-4 (]: 4 of 4 OK created sql table model dbt_rhys_spotify.fact_tracks ................. [[32mCREATE TABLE (89.7k rows, 10.0 MiB processed)[0m in 3.94s]
+[0m14:07:26.265976 [debug] [Thread-4 (]: Finished running node model.spotify_analytics.fact_tracks
+[0m14:07:26.267490 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:07:26.329458 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:07:26.329591 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_artists' was properly closed.
+[0m14:07:26.329685 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_genres' was properly closed.
+[0m14:07:26.329772 [debug] [MainThread]: Connection 'model.spotify_analytics.dim_tracks' was properly closed.
+[0m14:07:26.329856 [debug] [MainThread]: Connection 'model.spotify_analytics.fact_tracks' was properly closed.
+[0m14:07:26.329986 [info ] [MainThread]: 
+[0m14:07:26.330108 [info ] [MainThread]: Finished running 4 table models in 0 hours 0 minutes and 5.03 seconds (5.03s).
+[0m14:07:26.330501 [debug] [MainThread]: Command end result
+[0m14:07:26.340567 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/manifest.json
+[0m14:07:26.341260 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/semantic_manifest.json
+[0m14:07:26.343559 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/rhysorchard/cbf-spotify-dbt-analytics/target/run_results.json
+[0m14:07:26.343658 [info ] [MainThread]: 
+[0m14:07:26.343785 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:07:26.343884 [info ] [MainThread]: 
+[0m14:07:26.343994 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4
+[0m14:07:26.346055 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.7900834, "process_in_blocks": "0", "process_kernel_time": 1.047414, "process_mem_max_rss": "418660352", "process_out_blocks": "0", "process_user_time": 2.934195}
+[0m14:07:26.346227 [debug] [MainThread]: Command `dbt run` succeeded at 14:07:26.346195 after 7.79 seconds
+[0m14:07:26.346348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf53e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf53e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102de1f10>]}
+[0m14:07:26.346467 [debug] [MainThread]: Flushing usage events
+[0m14:07:27.038284 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_tracks
+    description: "Cleaned and casted tracks data"
+    columns:
+      - name: track_id
+        description: "Primary key for tracks"
+        tests:
+          - unique
+          - not_null
+      - name: duration_minutes
+        description: "Track duration in minutes"
+        tests:
+          - not_null

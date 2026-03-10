@@ -24,6 +24,8 @@ renamed as (
 
     from source
     where track_id is not null
+
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY track_id ORDER BY track_id) = 1
 )
 
 select * from renamed
