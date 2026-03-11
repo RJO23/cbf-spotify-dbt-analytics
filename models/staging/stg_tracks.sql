@@ -1,11 +1,9 @@
 with source as (
-
     select * from {{ source('raw_spotify', 'tracks') }}
 ),
 
 renamed as (
     select
-       
         cast(track_id as string) as track_id,
         cast(track_name as string) as track_name,
         cast(artists as string) as artist_names,
@@ -20,7 +18,8 @@ renamed as (
         cast(tempo as float64) as tempo,
         
         cast(duration_ms as int64) as duration_ms,
-        round(cast(duration_ms as float64) / 60000.0, 2) as duration_minutes
+        
+        {{ convert_ms_to_minutes('duration_ms') }} as duration_minutes
 
     from source
     where track_id is not null

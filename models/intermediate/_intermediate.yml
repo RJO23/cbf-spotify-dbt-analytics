@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: int_track_deduped
+    description: "Deduplicated tracks keeping only the most popular version."
+    columns:
+      - name: track_id
+        description: "The unique identifier for the track."
+        tests:
+          - unique
+          - not_null
+
+  - name: int_track_duplicate_analysis
+    description: "Analysis of duplicated track IDs."
+    columns:
+      - name: track_id
+        description: "The unique identifier for the track being analyzed."
+        tests:
+          - unique
+          - not_null
+
+  - name: int_tracks_artists
+    description: "Unnested artists attached to their track IDs. Grain: One row per track, per artist."
+    columns:
+      - name: track_id
+        description: "The unique identifier for the track. (Note: Not unique in this table!)"
+        tests:
+          - not_null
+
+      - name: artist_name
+        description: "The individual artist name extracted from the array."
+        tests:
+          - not_null
