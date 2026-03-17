@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_artist
+    description: "Dimension table for unique artists. Grain: One row per artist."
+    columns:
+      - name: artist_key
+        description: "Surrogate key generated via dbt_utils based on the artist's name."
+        tests:
+          - unique
+          - not_null
+      - name: artist_name
+        description: "The official name of the Spotify artist."
+
+  - name: dim_track
+    description: "Dimension table for descriptive track metadata. Grain: One row per track."
+    columns:
+      - name: track_key
+        description: "Surrogate key generated via dbt_utils based on the track ID."
+        tests:
+          - unique
+          - not_null
+      - name: track_id
+        description: "The original Spotify alphanumeric ID for the track."
+      - name: track_name
+        description: "The official title of the track."
+      - name: album_name
+        description: "The name of the album the track appears on."
+      - name: track_genre
+        description: "The primary musical genre associated with the track."
+      - name: duration_category
+        description: "Text grouping of track length (e.g., 'Short', 'Medium', 'Long')."
+      - name: popularity_bucket
+        description: "Categorical grouping of the track's popularity score (e.g., 'High', 'Medium', 'Low')."
+      - name: tempo_category
+        description: "Text classification of the track's beats per minute (e.g., 'Slow', 'Fast')."
+
+  - name: fact_track_artist_metrics
+    description: "Core fact table with audio metrics. Grain: One row per track, per artist."
+    columns:
+      - name: track_key
+        description: "Foreign key linking to dim_track."
+        tests:
+          - not_null
+      - name: artist_key
+        description: "Foreign key linking to dim_artist."
+        tests:
+          - not_null
+      - name: track_id
+        description: "Degenerate dimension for the original Spotify track ID, kept for easy auditing."
+      - name: popularity
+        description: "Raw numeric popularity score of the track from 0 to 100."
+      - name: danceability
+        description: "Raw numeric score from 0.0 to 1.0 describing how suitable a track is for dancing."
+      - name: energy
+        description: "Raw numeric score from 0.0 to 1.0 representing a perceptual measure of intensity and activity."
+      - name: tempo
+        description: "Raw numeric estimated tempo of a track in beats per minute (BPM)."
+      - name: duration_minutes
+        description: "Raw numeric length of the track in minutes. Kept in the fact table for mathematical aggregations."

@@ -1,0 +1,14 @@
+unit_tests:
+  - name: test_duration_minutes_calculation
+    description: "Check that duration_ms is correctly converted to minutes"
+    model: stg_tracks
+    given:
+      
+      - input: source('raw_spotify', 'tracks') 
+        rows:
+          - { track_id: "A1", duration_ms: 60000 }   # Exactly 1 minute
+          - { track_id: "B2", duration_ms: 150000 }  # Exactly 2.5 minutes
+    expect:
+      rows:
+        - { track_id: "A1", duration_minutes: 1.0 }
+        - { track_id: "B2", duration_minutes: 2.5 }

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_spotify
+    description: "Raw Spotify tracks data uploaded from Kaggle"
+    database: rhys-project-485811 
+    schema: raw_spotify_data      
+    tables:
+      - name: tracks
+        identifier: Tracks        
+        description: "Raw tracks metadata including audio features"
+        columns:
+          - name: track_id
+            description: "The primary key for the track"
+            tests:
+              - not_null
+              
